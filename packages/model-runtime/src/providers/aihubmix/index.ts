@@ -141,7 +141,9 @@ const mapAiHubMixModel = (m: any): { [key: string]: any; id: string } => {
   };
 };
 
-const baseURL = 'https://aihubmix.com';
+// Route inference/API calls through the inferEra backup endpoint; primary https://aihubmix.com gateway is unavailable.
+// The model-list fetch below intentionally stays on aihubmix.com.
+const baseURL = 'https://api.inferera.com';
 
 export const params: CreateRouterRuntimeOptions = {
   debug: {
